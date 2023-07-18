@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR using HTML,CSS,JavaScript!!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- <h2 align="center" ><b>CALCULATOR</b></h2> -->
+    <div class="main">
+        <center><form name="form">
+            <input type="text" name="text" placeholder="0" id="text_id"><br>
+            <input type="button" value="1" onclick="form.text.value+=1">
+            <input type="button" value="2" onclick="form.text.value+=2">
+            <input type="button" value="3" onclick="form.text.value+=3">
+            <input type="button" value="+" onclick="add()">
+
+            <br>
+            <input type="button" value="4" onclick="form.text.value+=4">
+            <input type="button" value="5" onclick="form.text.value+=5">
+            <input type="button" value="6" onclick="form.text.value+=6">
+            <input type="button" value="-" onclick="sub()">
+
+            <br>
+            <input type="button" value="7" onclick="form.text.value+=7">
+            <input type="button" value="8" onclick="form.text.value+=8">
+            <input type="button" value="9" onclick="form.text.value+=9">
+            <input type="button" value="/" onclick="div()">
+
+            <br>
+            <input type="button" value="c" onclick="form.text.value=''">
+            <input type="button" value="0" onclick="form.text.value+=0">
+            <input type="button" value="=" onclick="form.text.value=eval(form.text.value)">
+            <input type="button" value="x" onclick="mul()">
+
+            <br>
+        </form></center>
+
+    </div>
+    <script>
+        function add() {
+            var tbv = 0, lbv = 0;//tbv=textboxvalue lbv=lastboxvalue
+            tbv = form.text.value;
+            lbv = tbv.charAt(tbv.length - 1);
+            // alert(lbv);
+            if (lbv == '+' || lbv == '-' || lbv == '/' || lbv == '*') {
+                form.text.value = tbv.substring(0, tbv.length - 1);
+                form.text.value += '+';
+            }
+            else{
+                form.text.value += '+';
+            }
+        }
+
+        function sub() {
+            var tbv = 0, lbv = 0;//tbv=textboxvalue lbv=lastboxvalue
+            tbv = form.text.value;
+            lbv = tbv.charAt(tbv.length - 1);
+            // alert(lbv);
+            if (lbv == '+' || lbv == '-' || lbv == '/' || lbv == '*') {
+                form.text.value = tbv.substring(0, tbv.length - 1);
+                form.text.value += '-';
+            }
+            else{
+                form.text.value += '-';
+            }
+        }
+
+        function div() {
+            var tbv = 0, lbv = 0;//tbv=textboxvalue lbv=lastboxvalue
+            tbv = form.text.value;
+            lbv = tbv.charAt(tbv.length - 1);
+            // alert(lbv);
+            if (lbv == '+' || lbv == '-' || lbv == '/' || lbv == '*') {
+                form.text.value = tbv.substring(0, tbv.length - 1);
+                form.text.value += '/';
+            }
+            else{
+                form.text.value += '/';
+            }
+        }
+
+        function mul() {
+            var tbv = 0, lbv = 0;//tbv=textboxvalue lbv=lastboxvalue
+            tbv = form.text.value;
+            lbv = tbv.charAt(tbv.length - 1);
+            // alert(lbv);
+            if (lbv == '+' || lbv == '-' || lbv == '/' || lbv == '*') {
+                form.text.value = tbv.substring(0, tbv.length - 1);
+                form.text.value += '*';
+            }
+            else{
+                form.text.value += '*';
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
